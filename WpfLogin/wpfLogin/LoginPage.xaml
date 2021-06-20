@@ -1,0 +1,38 @@
+﻿<Page x:Class="wpfLogin.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpfLogin"
+      mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      d:DesignHeight="365" d:DesignWidth="295"
+      Title="LoginPage" Background="White">
+
+        <Grid>
+        <Label Margin="18" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Bahnschrift Condensed">Welcome</Label>
+        
+            <StackPanel Margin="25 50 25 10">
+
+               <TextBox materialDesign:TextFieldAssist.HasClearButton="True" x:Name="txtName" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     materialDesign:HintAssist.Hint="User Name"  Margin="15" />
+
+                <PasswordBox materialDesign:TextFieldAssist.HasClearButton="True" x:Name="txtPwd" Margin="15 10 14 0" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                     materialDesign:HintAssist.Hint="User Password"/>
+
+                <Button Margin="15 1 10 10" x:Name="btnChange" Style="{StaticResource MaterialDesignFlatButton}"
+                    Content="Change Password" FontSize="9" HorizontalAlignment="Right" Click="btnChange_Click" />
+
+                <Button x:Name="btnLogin" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" 
+                     materialDesign:ButtonAssist.CornerRadius="15" Click="btnLogin_Click" Background="#FF607D8B">LOGIN</Button>
+
+                <StackPanel Margin="50 40 50 50">
+                    <Label FontSize="8" HorizontalAlignment="Center">Or signup using</Label>
+
+                    <Button x:Name="btnSign" Style="{StaticResource MaterialDesignFlatButton}"
+                    ToolTip="Create new account"
+                    Content="SignUp" FontSize="9" Click="btnSign_Click" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+</Page>
